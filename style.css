@@ -20,7 +20,7 @@ Date: Feb 18, 2026.
 body{
 margin:0;
 font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-background: url("assets/BackgroundImage.JFIF") no-repeat center center fixed;
+background: url("assets/BackgroundImage.JFIF") center/cover no-repeat;
 background-size: cover;
 color: #ffffff;
 position: relative;
@@ -349,6 +349,7 @@ height: 220px;
 }
 
 }
+
 
 
 
