@@ -32,7 +32,7 @@ content: "";
 position:fixed;
 inset:0;
 background: rgba(0,0,0,0.65);
-background-filter: blur(3px);
+filter: blur(3px);
 z-index: -1;
 }
 
@@ -322,6 +322,7 @@ background: black;
 text-align:center;
 margin-top: 30px;
 opacity: 0.9;
+font-style:italic;
 }
 
 .footer .small{
@@ -342,3 +343,4 @@ height: 220px;
 }
 
 }
+
