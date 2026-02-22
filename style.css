@@ -144,7 +144,6 @@ line-height: 1.5;
 font-family: serif;
 }
 
-
 .hero-photo{
 margin: 20px auto 12px;
 width: min(360px, 92%);
@@ -360,5 +359,3 @@ grid-template-columns: repeat(4, 1fr);
 height: 220px;
 }
 }
-
-
