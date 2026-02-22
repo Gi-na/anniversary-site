@@ -29,11 +29,12 @@ color: var(--text);
 
 body::before{
 content: "";
-position:absolute;
+position:fixed;
 inset:0;
-background: url("assets/BackgroundImage.JFIF") no-repeat center center fixed;
+background: rgba(0,0,0,0.65);
 filter: blur(3px);
 z-index: -1;
+}
 
 body::after{
 content: "";
@@ -207,7 +208,6 @@ border-left: 3px solid rgba(255,215,0,0.8);
 background: rgba(255,215,0,0.06);
 border-radius: 12px;
 font-weight: 650;
-font-style: italic;
 }
 
 .timeline{
@@ -264,6 +264,7 @@ transform: scale(0.98);
 .love-letter .big{
 font-size: 18px;
 margin-top: 14px;
+font-family: 'Montserrat', sans-serif;
 }
 
 .sign{
@@ -322,20 +323,20 @@ background: black;
 text-align:center;
 margin-top: 30px;
 opacity: 0.9;
+font-weight: bold;
 }
 
 .footer .small{
 opacity: 0.75;
 font-size: 14px;
-font-style:italic;
+font-style: italic
 }
 
 .footer .copyright{
 opacity: 0.75;
 font-size: 10px;
-font-style:italic;
-}
-
+font-style: italic
+}	
 
 @media (min-width: 800px){
 .grid{
@@ -348,10 +349,4 @@ grid-template-columns: repeat(4, 1fr);
 .photo{
 height: 220px;
 }
-
 }
-
-
-
-
-
