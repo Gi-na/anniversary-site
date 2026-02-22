@@ -4,6 +4,7 @@ Program: Eric&Gina's Anniversary
 Date: Feb 18, 2026.
  **/
 
+
 // Surprise reveal + confetti + lightbox
 const btn = document.getElementById("surpriseBtn");
 const area = document.getElementById("surpriseArea");
@@ -117,8 +118,7 @@ lightboxImg.src = "";
 }
 });
 
-
-/Background Music
+//Background Music
 const music = document.getElementById("BackgroundSound");
 const videos = document.querySelectorAll("video");
 
@@ -142,5 +142,3 @@ video.addEventListener("ended", () => {
 music.play();
 });
 });
-
-
