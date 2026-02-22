@@ -4,32 +4,6 @@ Program: Eric&Gina's Anniversary
 Date: Feb 18, 2026.
  **/
 
-/Background Music
-const music = document.getElementById("BackgroundSound");
-const videos = document.querySelectorAll("video");
-
-/* Start music on first user interaction */
-document.addEventListener("click", function startMusic() {
-music.play().catch(() => {});
-document.removeEventListener("click", startMusic);
-});
-
-/* Pause music when any video plays */
-videos.forEach(video => {
-video.addEventListener("play", () => {
-music.pause();
-});
-
-video.addEventListener("pause", () => {
-music.play();
-});
-
-video.addEventListener("ended", () => {
-music.play();
-});
-});
-
-
 // Surprise reveal + confetti + lightbox
 const btn = document.getElementById("surpriseBtn");
 const area = document.getElementById("surpriseArea");
@@ -141,5 +115,32 @@ if(e.target === lightbox){
 lightbox.classList.add("hidden");
 lightboxImg.src = "";
 }
-
 });
+
+
+/Background Music
+const music = document.getElementById("BackgroundSound");
+const videos = document.querySelectorAll("video");
+
+/* Start music on first user interaction */
+document.addEventListener("click", function startMusic() {
+music.play().catch(() => {});
+document.removeEventListener("click", startMusic);
+});
+
+/* Pause music when any video plays */
+videos.forEach(video => {
+video.addEventListener("play", () => {
+music.pause();
+});
+
+video.addEventListener("pause", () => {
+music.play();
+});
+
+video.addEventListener("ended", () => {
+music.play();
+});
+});
+
+
