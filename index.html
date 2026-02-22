@@ -252,9 +252,40 @@ Your browser does not support the video tag.
 </main>
 
 <script src="script.js"></script>
+ <audio id="BackgroundSound" loop>
+    <source src="assets/BackgroundSound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+const videos = document.querySelectorAll("video");
+
+/* Start music on first user interaction */
+document.addEventListener("click", function startMusic() {
+music.play().catch(() => {});
+document.removeEventListener("click", startMusic);
+});
+
+/* Pause music when any video plays */
+videos.forEach(video => {
+video.addEventListener("play", () => {
+music.pause();
+});
+
+video.addEventListener("pause", () => {
+music.play();
+});
+
+video.addEventListener("ended", () => {
+music.play();
+});
+});
+</script>
+ 
 </body>
 
 </html>
+
 
 
 
