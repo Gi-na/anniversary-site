@@ -126,11 +126,14 @@ font-family: 'Playfair display', serif;
 h1{
 font-size: clamp(30px, 4vw, 54px);
 margin: 0 0 10px;
+font-family: Bodoni Moda;
 }
 
 .date{
 margin: 0 0 14px;
 color: rgba(255,255,255,0.75);
+font-style:italic;
+font-weight: bold;
 }
 
 .sub{
@@ -138,7 +141,9 @@ margin: 0 auto 22px;
 max-width: 650px;
 color: rgba(255,255,255,0.86);
 line-height: 1.5;
+font-family: serif;
 }
+
 
 .hero-photo{
 margin: 20px auto 12px;
@@ -267,12 +272,14 @@ transform: scale(0.98);
 font-size: 18px;
 margin-top: 14px;
 font-family: 'Georgia', sans-serif;
+font-style: italic-bold;
 }
 
 .sign{
 margin-top: 18px;
 font-size: 16px;
 font-family: DM Serif Display;
+font-style:italic;
 }
 
 .surprise{
@@ -353,4 +360,5 @@ grid-template-columns: repeat(4, 1fr);
 height: 220px;
 }
 }
+
 
