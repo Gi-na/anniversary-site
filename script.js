@@ -119,26 +119,30 @@ lightboxImg.src = "";
 });
 
 //Background Music
-const music = document.getElementById("BackgroundSound");
+const music = document.getElementById("bgMusic");
 const videos = document.querySelectorAll("video");
 
-/* Start music on first user interaction */
-document.addEventListener("click", function startMusic() {
-music.play().catch(() => {});
-document.removeEventListener("click", startMusic);
-});
+/* Start music on first tap (mobile safe) */
+document.addEventListener("touchstart", startMusic, { once: true });
+document.addEventListener("click", startMusic, { once: true });
 
-/* Pause music when any video plays */
+function startMusic() {
+music.volume = 0.5; // softer background level
+music.play().catch(() => {});
+}
+
+/* Pause music when video plays */
 videos.forEach(video => {
 video.addEventListener("play", () => {
 music.pause();
 });
 
-video.addEventListener("pause", () => {
-music.play();
-});
-
 video.addEventListener("ended", () => {
 music.play();
 });
+
+video.addEventListener("pause", () => {
+music.play();
 });
+});
+
